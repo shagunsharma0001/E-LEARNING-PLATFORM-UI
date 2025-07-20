@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progress Tracker - E-Learn</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .progress-bar:hover {
+      filter: brightness(1.1);
+      transform: scaleX(1.01);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .course-card {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .graphic {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white p-6 shadow-lg">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-3xl font-bold tracking-wide">📚 E-Learn Progress Tracker</h1>
+      <span class="text-sm mt-2 md:mt-0 font-light">Empowering Students through Knowledge</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-white py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Track, Learn, Achieve!</h2>
+        <p class="text-gray-600 text-lg">Visualize your learning journey, stay motivated, and conquer your goals with our progress tracker. Let’s make learning fun and focused.</p>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942163.png" alt="E-learning" class="w-48 graphic">
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Section -->
+  <main class="px-6 py-10 max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6 text-center text-indigo-700">📘 Your Enrolled Courses</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Python -->
+      <div class="p-6 course-card">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">🐍 Python for Beginners</h3>
+        <div class="w-full bg-gray-200 rounded-full h-4">
+          <div class="bg-green-500 h-4 rounded-full progress-bar" style="width: 70%"></div>
+        </div>
+        <p class="mt-2 text-sm text-gray-600">70% completed</p>
+      </div>
+
+      <!-- Web Dev -->
+      <div class="p-6 course-card">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">🌐 Web Development</h3>
+        <div class="w-full bg-gray-200 rounded-full h-4">
+          <div class="bg-blue-500 h-4 rounded-full progress-bar" style="width: 40%"></div>
+        </div>
+        <p class="mt-2 text-sm text-gray-600">40% completed</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-50 text-center text-sm text-gray-600 p-4 mt-10 border-t border-indigo-100">
+    © 2025 E-Learn. Made with ❤️ for lifelong learners.
+  </footer>
+
+</body>
+</html>
